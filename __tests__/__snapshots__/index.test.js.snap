@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index Index shows search results 1`] = `
+<div
+  className="Layout-s1g5c6wv-0 iGNeBi"
+>
+  <div>
+    <a
+      className="Header__Anchor-s1r46539-0 beuLLo"
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      className="Header__Anchor-s1r46539-0 beuLLo"
+      href="/about"
+      onClick={[Function]}
+    >
+      About
+    </a>
+  </div>
+  <h1>
+    Batman TV Shows
+  </h1>
+  <ul>
+    <li>
+      <a
+        href="/p/show-1"
+        onClick={[Function]}
+      >
+        show name
+      </a>
+    </li>
+  </ul>
+</div>
+`;

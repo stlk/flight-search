@@ -1,0 +1,61 @@
+{
+  "name": "hello-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start -p 8000",
+    "test": "node test.js",
+    "lint:staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --trailing-comma=all",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.1.4",
+    "express": "^4.15.3",
+    "isomorphic-unfetch": "^1.0.0",
+    "next": "^2.4.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "styled-components": "^2.0.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": "commonjs"
+        }
+      ],
+      "next/babel"
+    ],
+    "plugins": [
+      [
+        "styled-components",
+        {
+          "ssr": true
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "lint-staged": "^3.6.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.4.4",
+    "react-test-renderer": "^15.5.4"
+  },
+  "pre-commit": "lint:staged",
+  "jest": {
+    "testRegex": "/__tests__/.*\\.js$"
+  }
+}
