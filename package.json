@@ -20,13 +20,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.1.4",
-    "express": "^4.15.3",
+    "babel-plugin-styled-components": "^1.2.1",
+    "express": "^4.16.2",
     "isomorphic-unfetch": "^1.0.0",
-    "next": "^2.4.3",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "styled-components": "^2.0.1"
+    "next": "^4.0.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "styled-components": "^2.2.1"
   },
   "babel": {
     "presets": [
