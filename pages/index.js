@@ -1,15 +1,17 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import fetch from 'isomorphic-unfetch';
 
-const Index = props =>
+import { getGists, getProfile } from '../lib/api';
+import Profile from '../components/Profile';
+
+const Index = ({ profile, gists }) =>
   <Layout>
-    <h1>Batman TV Shows</h1>
+    <Profile profile={profile} />
     <ul>
-      {props.shows.map(({ show }) =>
-        <li key={show.id}>
-          <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
-            <a>{show.name}</a>
+      {gists.map(gist =>
+        <li key={gist.id}>
+          <Link as={`/gist/${gist.id}`} href={`/gist?id=${gist.id}`}>
+            <a>{gist.files[Object.keys(gist.files)[0]].filename}</a>
           </Link>
         </li>,
       )}
@@ -17,13 +19,14 @@ const Index = props =>
   </Layout>;
 
 Index.getInitialProps = async function() {
-  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
-  const data = await res.json();
+  const data = await getGists('stlk');
+  const profile = await getProfile('stlk');
 
-  console.log(`Show data fetched. Count: ${data.length}`);
+  console.log(`Gists fetched. Count: ${data.length}`);
 
   return {
-    shows: data,
+    gists: data,
+    profile,
   };
 };
 
