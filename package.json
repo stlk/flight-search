@@ -30,19 +30,15 @@
   },
   "babel": {
     "presets": [
-      [
-        "env",
-        {
-          "modules": "commonjs"
-        }
-      ],
       "next/babel"
     ],
     "plugins": [
       [
         "styled-components",
         {
-          "ssr": true
+          "ssr": true,
+          "displayName": true,
+          "preprocess": false
         }
       ]
     ]

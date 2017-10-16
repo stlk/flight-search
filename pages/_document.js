@@ -2,8 +2,10 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet, injectGlobal } from 'styled-components';
 
 injectGlobal`
-  --main-color: #516163;
-  --secondary-color: #63B2BB;
+  :root {
+    --main-color: #516163;
+    --secondary-color: #63B2BB;
+  }
 
   body {
     color: var(--main-color);
@@ -33,11 +35,16 @@ injectGlobal`
 `;
 
 export default class MyDocument extends Document {
-  render() {
+  static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
-    const main = sheet.collectStyles(<Main />);
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />),
+    );
     const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
+  }
 
+  render() {
     return (
       <html>
         <Head>
@@ -52,14 +59,11 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             type="text/css"
           />
-          {styleTags}
+          {this.props.styleTags}
         </Head>
 
         <body>
-          <div className="root">
-            {main}
-          </div>
-
+          <Main />
           <NextScript />
         </body>
       </html>
