@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import '../lib/progress';
 
 const Anchor = styled(({ href, className, children }) =>
   <Link href={href}>
