@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start -p 8000",
     "test": "node test.js",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "analyze": "cross-env ANALYZE=1 next build"
   },
   "lint-staged": {
     "*.js": [
@@ -46,11 +47,13 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^5.1.0",
     "jest": "^20.0.4",
     "lint-staged": "^3.6.1",
     "pre-commit": "^1.2.2",
     "prettier": "^1.4.4",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "webpack-bundle-analyzer": "^2.9.0"
   },
   "pre-commit": "lint:staged",
   "jest": {
