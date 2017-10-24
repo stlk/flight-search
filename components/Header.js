@@ -1,40 +1,15 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+
+import Title from './Title';
 import '../lib/progress';
 
 const Anchor = styled(({ href, className, children }) =>
   <Link href={href}>
     <a className={className}>{children}</a>
-  </Link>,
+  </Link>
 )`
   margin-right: 15px;
-`;
-
-const Title = styled(({ className }) =>
-  <h1 className={className}>
-    <Link href="/">
-      <a>
-        <strong>gist</strong><br />
-        viewer
-      </a>
-    </Link>
-  </h1>,
-)`
-  font-size: 60px;
-  line-height: 60px;
-  letter-spacing: 5px;
-  margin-bottom: 48px;
-  margin-top: 0;
-  text-transform: uppercase;
-
-  a {
-    color: var(--main-color);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--secondary-color);
-    }
-  }
 `;
 
 const Header = styled(({ className }) =>
@@ -45,7 +20,7 @@ const Header = styled(({ className }) =>
       <Anchor href="/about">About</Anchor>
       <Anchor href="/flights">Flights</Anchor>
     </nav>
-  </div>,
+  </div>
 )`
   display: flex;
   flex-direction: row;
