@@ -4,16 +4,24 @@ import renderer from 'react-test-renderer';
 import Index from '../pages/index.js';
 
 describe('index', () => {
-  it('Index shows search results', () => {
-    const shows = [
+  it('Index shows gists', () => {
+    const gists = [
       {
-        show: {
-          id: 'show-1',
-          name: 'show name',
-        },
-      },
+        id: 'gist-1',
+        files: {
+          file: {
+            filename: 'filename'
+          }
+        }
+      }
     ];
-    const component = renderer.create(<Index shows={shows} />);
+    const profile = {
+      name: 'next guy',
+      avatar_url: 'url'
+    };
+    const component = renderer.create(
+      <Index gists={gists} profile={profile} />
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
