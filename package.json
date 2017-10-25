@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start -p 8000",
+    "start": "NODE_ENV=production node server.js",
     "test": "node test.js",
     "lint:staged": "lint-staged",
     "analyze": "cross-env ANALYZE=1 next build"
