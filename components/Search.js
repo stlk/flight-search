@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import AutocompleteContainer from './AutocompleteContainer';
+
 const Search = styled.div`
 
   input {
@@ -19,11 +21,11 @@ export default ({ from, to, date }) =>
     <form action="/flights">
       <label>
         From:
-        <input type="text" name="from" defaultValue={from} />
+        <AutocompleteContainer name="from" defaultValue={from} />
       </label>
       <label>
         To:
-        <input type="text" name="to" defaultValue={to} />
+        <AutocompleteContainer name="to" defaultValue={to} />
       </label>
       <label>
         When:

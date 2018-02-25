@@ -5,6 +5,7 @@ injectGlobal`
   :root {
     --main-color: #516163;
     --secondary-color: #63B2BB;
+    --black-color: #323B3C;
   }
 
   body {
@@ -16,7 +17,7 @@ injectGlobal`
   }
 
   h1 {
-    color: #323B3C;
+    color: var(--black-color);
     font-family: 'PT Sans Narrow';
     font-weight: 400;
   }
@@ -30,7 +31,7 @@ injectGlobal`
   }
 
   a:hover {
-    color: #323B3C;
+    color: var(--black-color);
   }
 `;
 

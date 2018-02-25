@@ -29,6 +29,7 @@
     "next": "^4.0.1",
     "nprogress": "^0.2.0",
     "react": "^16.0.0",
+    "react-autocomplete": "^1.8.1",
     "react-dom": "^16.0.0",
     "styled-components": "^2.2.1"
   },
