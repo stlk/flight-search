@@ -10,9 +10,9 @@ injectGlobal`
   body {
     color: var(--main-color);
     font-family: 'PT Sans';
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 36px;
+    line-height: 2em;
   }
 
   h1 {
@@ -38,7 +38,7 @@ export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
     const page = renderPage(App => props =>
-      sheet.collectStyles(<App {...props} />),
+      sheet.collectStyles(<App {...props} />)
     );
     const styleTags = sheet.getStyleElement();
     return { ...page, styleTags };
@@ -48,7 +48,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>gist viewer</title>
+          <title>flight search</title>
           <link
             href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700"
             rel="stylesheet"

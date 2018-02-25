@@ -25,6 +25,7 @@
     "express": "^4.16.2",
     "graphql-request": "^1.4.0",
     "isomorphic-unfetch": "^1.0.0",
+    "moment": "^2.20.1",
     "next": "^4.0.1",
     "nprogress": "^0.2.0",
     "react": "^16.0.0",

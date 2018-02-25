@@ -1,28 +1,48 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
+import styled from 'styled-components';
 
 import { getFlights } from '../lib/graphql';
 
-const Index = ({ flights }) =>
+import Search from '../components/Search';
+import SearchResult from '../components/SearchResult';
+
+const Content = styled.div`
+  max-width: 900px;
+`;
+
+const Index = ({ query: { from, to, date }, query, flights, errors }) =>
   <Layout>
-    {flights.map(flight =>
-      <div key={flight.node.id}>
-        <h4>{flight.node.departure.time}</h4>
-        <h6>{flight.node.airlines[0].name}</h6>
-        <p>
-          <span>{flight.node.duration} mins</span>{' - '}
-          {flight.node.price.amount} {flight.node.price.currency}
-        </p>
-      </div>,
-    )}
+    <Search {...query} />
+    <Content>
+      <p>
+        Searching for flights from <strong>{from}</strong> to{' '}
+        <strong>{to}</strong> on <strong>{date}</strong>.
+      </p>
+      {errors.map(error => <h3>{error.message}</h3>)}
+      {flights.map(flight =>
+        <SearchResult key={flight.node.id} flight={flight} />
+      )}
+    </Content>
   </Layout>;
 
-Index.getInitialProps = async function() {
-  const data = await getFlights();
+Index.getInitialProps = async function(context) {
+  const { from, to, date } = context.query;
+  let data = [];
+  let errors = [];
 
-  console.log(`Flights fetched. Count: ${data.allFlights.edges.length}`);
+  try {
+    const results = await getFlights(from, to, date);
+    data = results.allFlights.edges;
+  } catch (e) {
+    errors = e.response.errors;
+  }
+
+  console.log(`Flights fetched. Count: ${data.length}`);
   return {
-    flights: data.allFlights.edges,
+    flights: data,
+    errors,
+    query: context.query
   };
 };
 

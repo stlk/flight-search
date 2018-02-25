@@ -5,7 +5,7 @@ const Title = styled.h1`
   font-size: 60px;
   line-height: 60px;
   letter-spacing: 5px;
-  margin-bottom: 48px;
+  margin-bottom: 0;
   margin-top: 0;
   text-transform: uppercase;
 
@@ -23,8 +23,8 @@ export default () =>
   <Title>
     <Link href="/">
       <a>
-        <strong>gist</strong><br />
-        viewer
+        <strong>flight</strong><br />
+        search
       </a>
     </Link>
   </Title>;

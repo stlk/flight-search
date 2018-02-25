@@ -18,7 +18,6 @@ const Header = styled(({ className }) =>
     <nav>
       <Anchor href="/">Home</Anchor>
       <Anchor href="/about">About</Anchor>
-      <Anchor href="/flights">Flights</Anchor>
     </nav>
   </div>
 )`
