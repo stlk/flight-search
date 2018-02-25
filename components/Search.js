@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import AutocompleteContainer from './AutocompleteContainer';
+import DatepickerContainer from './DatepickerContainer';
 
 const Search = styled.div`
 
@@ -29,7 +30,7 @@ export default ({ from, to, date }) =>
       </label>
       <label>
         When:
-        <input type="text" name="date" defaultValue={date} />
+        <DatepickerContainer defaultValue={date} />
       </label>
       <input type="submit" value="Search" />
     </form>

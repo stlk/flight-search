@@ -21,15 +21,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-css": "^0.1.2",
     "babel-plugin-styled-components": "^1.2.1",
     "express": "^4.16.2",
     "graphql-request": "^1.4.0",
     "isomorphic-unfetch": "^1.0.0",
     "moment": "^2.20.1",
-    "next": "^4.0.1",
+    "next": "5",
     "nprogress": "^0.2.0",
     "react": "^16.0.0",
     "react-autocomplete": "^1.8.1",
+    "react-datepicker": "^1.2.1",
     "react-dom": "^16.0.0",
     "styled-components": "^2.2.1"
   },

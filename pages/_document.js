@@ -60,6 +60,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             type="text/css"
           />
+          <link rel="stylesheet" href="/_next/static/style.css" />
           {this.props.styleTags}
         </Head>
 
