@@ -14,6 +14,10 @@ const ListContent = styled.div`
   flex-shrink: 0;
   padding: 1rem;
   justify-content: space-between;
+
+  table {
+    width: 40rem;
+  }
 `;
 
 const ListItemTitle = styled.div`
@@ -63,27 +67,29 @@ const FlightDuration = ({ flight }) => {
 
 const Leg = styled(({ airline, departure, arrival, className }) => {
   return (
-    <div className={className}>
-      <img src={airline.logoUrl} title={airline.name} />
-      <div>
+    <tr className={className}>
+      <td>
+        <img src={airline.logoUrl} title={airline.name} />
+      </td>
+      <td>
         {departure.airport.name}
-      </div>
-      <div>
+      </td>
+      <td>
         {arrival.airport.name}
-      </div>
-    </div>
+      </td>
+    </tr>
   );
 })`
-  display: grid;
-  grid-template-columns: auto auto auto;
-
   img {
+    display: inline-block;
+    margin-top: .5em;
     height: 2em;
   }
 
-  & > * {
-    margin-right: 1em;
+  td {
+    padding-right: 1em;
   }
+
 `;
 
 export default ({ flight }) =>
@@ -99,9 +105,11 @@ export default ({ flight }) =>
           {moment(flight.node.arrival.time).format('H:mm')}
         </ListItem__Arrival>
       </ListItem__DateContainer>
-      <div>
-        {flight.node.legs.map(leg => <Leg key={leg.flightNumber} {...leg} />)}
-      </div>
+      <table>
+        <tbody>
+          {flight.node.legs.map(leg => <Leg key={leg.flightNumber} {...leg} />)}
+        </tbody>
+      </table>
       <ListItemTitle>
         {flight.node.price.amount} {flight.node.price.currency}
       </ListItemTitle>
