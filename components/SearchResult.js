@@ -99,10 +99,12 @@ export default ({ flight }) =>
         <ListItem__Departure>
           <span>departure</span>
           {moment(flight.node.departure.time).format('H:mm')}
+          <span>{moment(flight.node.departure.time).format('D. M. YYYY')}</span>
         </ListItem__Departure>
         <ListItem__Arrival>
           <span>arrival</span>
           {moment(flight.node.arrival.time).format('H:mm')}
+          <span>{moment(flight.node.arrival.time).format('D. M. YYYY')}</span>
         </ListItem__Arrival>
       </ListItem__DateContainer>
       <table>
