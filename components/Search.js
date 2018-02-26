@@ -1,3 +1,4 @@
+import Router from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -19,7 +20,22 @@ const Search = styled.div`
 
 export default ({ from, to, date }) =>
   <Search>
-    <form action="/flights">
+    <form
+      action="/flights"
+      onSubmit={event => {
+        event.preventDefault();
+        const query = Array.from(
+          event.target
+        ).reduce((accumulator, formItem) => {
+          accumulator[formItem.name] = formItem.value;
+          return accumulator;
+        }, {});
+        Router.push({
+          pathname: '/flights',
+          query
+        });
+      }}
+    >
       <label>
         From:
         <AutocompleteContainer name="from" defaultValue={from} />
