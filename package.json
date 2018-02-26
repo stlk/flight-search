@@ -67,6 +67,9 @@
   },
   "pre-commit": "lint:staged",
   "jest": {
-    "testRegex": "/__tests__/.*\\.js$"
+    "testRegex": "/__tests__/.*\\.js$",
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }

@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flights shows flights 1`] = `
+<div
+  className="Layout-s62o9bf-1 dIpton"
+>
+  <div
+    className="Header-p2oiqz-1 fedUee"
+  >
+    <h1
+      className="Title-s15je9jd-0 eRmqcx"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <strong>
+          flight
+        </strong>
+        <br />
+        search
+      </a>
+    </h1>
+    <nav>
+      <a
+        className="Header__Anchor-p2oiqz-0 iPrusK"
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        className="Header__Anchor-p2oiqz-0 iPrusK"
+        href="/about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+    </nav>
+  </div>
+  <div
+    className="Layout__Content-s62o9bf-0 fUQwJD"
+  >
+    <div
+      className="Search-aeivv1-0 iYKKHW"
+    >
+      <form
+        action="/flights"
+      >
+        <label>
+          From:
+          <div
+            className="AutocompleteContainer-s1bbgvdj-0 jnlXpA"
+          >
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                autoComplete="off"
+                id="from"
+                name="from"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="combobox"
+                value="Prague"
+              />
+            </div>
+          </div>
+        </label>
+        <label>
+          To:
+          <div
+            className="AutocompleteContainer-s1bbgvdj-0 jnlXpA"
+          >
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded={false}
+                autoComplete="off"
+                id="to"
+                name="to"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="combobox"
+                value="Barcelona"
+              />
+            </div>
+          </div>
+        </label>
+        <label>
+          When:
+          <div
+            className="DatepickerContainer-s1jdkito-0 djxBjq"
+          >
+            <div>
+              <div
+                className="react-datepicker-wrapper"
+              >
+                <div
+                  className="react-datepicker__input-container"
+                >
+                  <input
+                    autoComplete={undefined}
+                    autoFocus={undefined}
+                    className=""
+                    disabled={false}
+                    id={undefined}
+                    name={undefined}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder={undefined}
+                    readOnly={undefined}
+                    required={undefined}
+                    tabIndex={undefined}
+                    title={undefined}
+                    type="text"
+                    value="03/06/2018"
+                  />
+                </div>
+              </div>
+            </div>
+            <input
+              name="date"
+              type="hidden"
+              value="2018-03-06"
+            />
+          </div>
+        </label>
+        <input
+          type="submit"
+          value="Search"
+        />
+      </form>
+    </div>
+    <div
+      className="flights__Content-s1wdw2le-0 kWmaRO"
+    >
+      <p>
+        Searching for flights from 
+        <strong>
+          Prague
+        </strong>
+         to
+         
+        <strong>
+          Barcelona
+        </strong>
+         on 
+        <strong>
+          2018-03-06
+        </strong>
+        .
+      </p>
+      <div
+        className="SearchResult__ListItem-s1t0qfze-0 iBDcIE"
+      >
+        <div
+          className="SearchResult__ListContent-s1t0qfze-1 dJKMAd"
+        >
+          <div
+            className="SearchResult__ListItem__DateContainer-s1t0qfze-3 kUyWYw"
+          >
+            <div
+              className="SearchResult__ListItem__Departure-s1t0qfze-4 bPYUZC"
+            >
+              <span>
+                departure
+              </span>
+              21:10
+            </div>
+            <div
+              className="SearchResult__ListItem__Arrival-s1t0qfze-5 hLJEMj"
+            >
+              <span>
+                arrival
+              </span>
+              23:35
+            </div>
+          </div>
+          <table>
+            <tbody>
+              <tr
+                className="SearchResult__Leg-s1t0qfze-7 cWeHxz"
+              >
+                <td>
+                  <img
+                    src="https://images.kiwi.com/airlines/64/VY.png"
+                    title="Vueling"
+                  />
+                </td>
+                <td>
+                  Václav Havel Airport Prague
+                </td>
+                <td>
+                  Barcelona–El Prat
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            className="SearchResult__ListItemTitle-s1t0qfze-2 leiZA"
+          >
+            46
+             
+            EUR
+          </div>
+        </div>
+        <div
+          className="SearchResult__Footer-s1t0qfze-6 eesaqC"
+        >
+          <span>
+            2
+            h 
+            25
+            m
+          </span>
+        </div>
+      </div>
+      <div
+        className="SearchResult__ListItem-s1t0qfze-0 iBDcIE"
+      >
+        <div
+          className="SearchResult__ListContent-s1t0qfze-1 dJKMAd"
+        >
+          <div
+            className="SearchResult__ListItem__DateContainer-s1t0qfze-3 kUyWYw"
+          >
+            <div
+              className="SearchResult__ListItem__Departure-s1t0qfze-4 bPYUZC"
+            >
+              <span>
+                departure
+              </span>
+              14:35
+            </div>
+            <div
+              className="SearchResult__ListItem__Arrival-s1t0qfze-5 hLJEMj"
+            >
+              <span>
+                arrival
+              </span>
+              17:00
+            </div>
+          </div>
+          <table>
+            <tbody>
+              <tr
+                className="SearchResult__Leg-s1t0qfze-7 cWeHxz"
+              >
+                <td>
+                  <img
+                    src="https://images.kiwi.com/airlines/64/FR.png"
+                    title="Ryanair"
+                  />
+                </td>
+                <td>
+                  Václav Havel Airport Prague
+                </td>
+                <td>
+                  Barcelona–El Prat
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            className="SearchResult__ListItemTitle-s1t0qfze-2 leiZA"
+          >
+            65
+             
+            EUR
+          </div>
+        </div>
+        <div
+          className="SearchResult__Footer-s1t0qfze-6 eesaqC"
+        >
+          <span>
+            2
+            h 
+            25
+            m
+          </span>
+        </div>
+      </div>
+      <div
+        className="Pager-q4rar8-0 dzWOMs"
+      >
+        <a>
+          Previous
+        </a>
+        <a
+          href="/flights?from=Prague&to=Barcelona&date=2018-03-06&after=YXJyYXljb25uZWN0aW9uOjQ%3D&before="
+          onClick={[Function]}
+        >
+          Next
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
